@@ -16,7 +16,8 @@ defmodule Issues.Mixfile do
 
   defp deps do
     [
-      {:httpoison, "~> 0.9"}
+      {:httpoison, "~> 0.9"},
+      {:poison, "~> 3.0"}
     ]
   end
 end
