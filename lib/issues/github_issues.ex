@@ -21,7 +21,7 @@ defmodule Issues.GithubIssues do
     {:ok, Poison.Parser.parse!(body)}
   end
 
-  def handle_response({_, %{status_code: _, body: body}}) do
+  def handle_response({_, %{status_code: status, body: body}}) do
     Logger.error "Error #{status} returned"
     {:error, Poison.Parser.parse!(body)}
   end
